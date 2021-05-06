@@ -79,7 +79,7 @@ Now you can trigger the test by running `npm run test` or `npm test` or `npm t`.
 
 8. Use [WebDriverIO API reference](https://webdriver.io/docs/api) to add more method and `expect` validations.
 
-9. Use [Jest's Expect library] to add more `expect` validarions.
+9. Use [Jest's Expect library](https://jestjs.io/docs/expect) to add more `expect` validarions.
 
 10. Few common commands to use:
 ````
