@@ -81,15 +81,19 @@ Now you can trigger the test by running `npm run test` or `npm test` or `npm t`.
 
 9. Use [Jest's Expect library](https://jestjs.io/docs/expect) to add more `expect` validarions.
 
-10. Few common commands to use:
+10. Use [CSS Selectors guide](https://dev.to/neutrino2211/using-css-selectors-in-javascript-3hlm) to find elements on a page.
+
+11. Few common WebDriverIO commands to use:
 ````
 browser.url('url')
 $('selector').click()
 $('selector').setValue('value')
 $('selector').waitForDisplayed({ reverse: true })
 expect(browser).toHaveUrl('expected-url')
+expect(browser).toHaveTitle('expected-title')
 expect($('selector')).toBeDisplayed()
 expect($('selector')).toHaveAttribute('attributeName', 'value')
 expect($('selector')).toHaveText('expected-value')
 expect($('selector')).toHaveTextContaining('expected-value')
+expect(value).toEqual(expected)
 ````
