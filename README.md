@@ -52,15 +52,16 @@ npm i @wdio/sync
 ````
 describe('Page', () => {
 
-    it('Title', () => {
+    before(() => {
         browser.url('/');
-        const title = browser.getTitle();
-        console.log('Title is: ' + title);
+    })
+
+    it('Title', () => {
+      expect(browser).toHaveTitle('TechStart')
     })
 
     it('URL', () => {
-        const URL = browser.getUrl();
-        console.log('URL is: ' + URL);
+      expect(browser).toHaveUrl('https://free-courses-client-prod.herokuapp.com/')
     })
 
 })
@@ -77,9 +78,9 @@ npx wdio run ./wdio.conf.js
 ````
 Now you can trigger the test by running `npm run test` or `npm test` or `npm t`.
 
-8. Use [WebDriverIO API reference](https://webdriver.io/docs/api) to add more method and `expect` validations.
+8. Use [WebDriverIO API reference](https://webdriver.io/docs/api) to add more `browser` and `element` methods as well as `expect` validations.
 
-9. Use [Jest's Expect library](https://jestjs.io/docs/expect) to add more `expect` validarions.
+9. Use [Jest's Expect library](https://jestjs.io/docs/expect) to add more `expect` validations.
 
 10. Use [CSS Selectors guide](https://dev.to/neutrino2211/using-css-selectors-in-javascript-3hlm) to find elements on a page.
 
@@ -88,6 +89,7 @@ Now you can trigger the test by running `npm run test` or `npm test` or `npm t`.
 browser.url('url')
 $('selector').click()
 $('selector').setValue('value')
+$('selector').waitForDisplayed()
 $('selector').waitForDisplayed({ reverse: true })
 expect(browser).toHaveUrl('expected-url')
 expect(browser).toHaveTitle('expected-title')
