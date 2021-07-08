@@ -1,14 +1,15 @@
 describe('Page', () => {
 
-    it('Title', () => {
+    before(() => {
         browser.url('/');
-        const title = browser.getTitle();
-        console.log('Title is: ' + title);
+    })
+
+    it('Title', () => {
+        expect(browser).toHaveTitle('TechStart')
     })
 
     it('URL', () => {
-        const URL = browser.getUrl();
-        console.log('URL is: ' + URL);
+        expect(browser).toHaveUrl('https://free-courses-client-prod.herokuapp.com/line/patient')
     })
 
 })

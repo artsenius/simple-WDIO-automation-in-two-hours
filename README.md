@@ -61,7 +61,7 @@ describe('Page', () => {
     })
 
     it('URL', () => {
-      expect(browser).toHaveUrl('https://free-courses-client-prod.herokuapp.com/')
+      expect(browser).toHaveUrl('https://free-courses-client-prod.herokuapp.com/line/patient')
     })
 
 })
