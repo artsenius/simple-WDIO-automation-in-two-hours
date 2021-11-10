@@ -10,8 +10,7 @@ TechStart.dev. WebDriverIO in two hours.
 ---
 ## 1. Preparation:
 1. Create a folder for storing the Automation project and open it with VS Code:
-  - `File => Open` on Mac
-  - `File => Open Folder` on Windows
+  - `File => Open Folder`
 
 2. Open Terminal:
   - `Terminal => New Terminal`
