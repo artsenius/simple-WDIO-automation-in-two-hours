@@ -37,8 +37,10 @@ and select/specify the following options:
 - type `./test/*.js`
 - type `N`
 - select `spec`
+- don't select anything, just press `Enter`
 - select `chromedriver`
 - type `https://free-courses-client-prod.herokuapp.com/`
+- Type `Y`
 
 Wait till the end of the installation.
 
