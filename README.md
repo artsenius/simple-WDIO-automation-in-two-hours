@@ -5,7 +5,7 @@ TechStart.dev. WebDriverIO in two hours.
 1. [Node.js](https://youtu.be/dUEHCy9gDYQ)
 2. [VS Code](https://youtu.be/TjNZKtAHyA4)
 3. [Python](https://youtu.be/-hq23wpsnjY)
-5. Install/Update [Chrome browser](https://www.google.com/chrome/) to the latest version
+5. Install or Update [Chrome browser](https://www.google.com/chrome/), so you have the latest version.
 
 ---
 ## 1. Preparation:
@@ -42,48 +42,43 @@ and select/specify the following options:
 
 Wait till the end of the installation.
 
-4. Install Sync WDIO module:
-```
-npm i @wdio/sync
-```
-
-5. Create `test` folder and then `test.js` file in `test` folder. Paste the following code into the file:
+4. Create `test` folder and then `test.js` file in `test` folder. Paste the following code into the file:
 ````
 describe('Page', () => {
 
-    before(() => {
-        browser.url('/');
+    before(async function () {
+        await browser.url('/');
     })
 
-    it('Title', () => {
-      expect(browser).toHaveTitle('TechStart')
+    it('Title', async function () {
+        await expect(browser).toHaveTitle('TechStart')
     })
 
-    it('URL', () => {
-      expect(browser).toHaveUrl('https://free-courses-client-prod.herokuapp.com/line/patient')
+    it('URL', async function () {
+        await expect(browser).toHaveUrl('https://free-courses-client-prod.herokuapp.com/line/patient')
     })
 
 })
 ````
 
-6. Run your firts test:
+5. Run your firts test:
 ````
 npx wdio run ./wdio.conf.js
 ````
 
-7. Replace `test` script in `package.json` by:
+6. Replace `test` script in `package.json` by:
 ````
 "test": "npx wdio run ./wdio.conf.js"
 ````
-Now you can trigger the test by running `npm run test` or `npm test` or `npm t`.
+Now you can trigger the test by running `npm run test`.
 
-8. Use [WebDriverIO API reference](https://webdriver.io/docs/api) to add more `browser` and `element` methods as well as `expect` validations.
+7. Use [WebDriverIO API reference](https://webdriver.io/docs/api) to add more `browser` and `element` methods as well as `expect` validations.
 
-9. Use [Jest's Expect library](https://jestjs.io/docs/expect) to add more `expect` validations.
+8. Use [Jest's Expect library](https://jestjs.io/docs/expect) to add more `expect` validations.
 
-10. Use [CSS Selectors guide](https://dev.to/neutrino2211/using-css-selectors-in-javascript-3hlm) to find elements on a page.
+9. Use [CSS Selectors guide](https://dev.to/neutrino2211/using-css-selectors-in-javascript-3hlm) to find elements on a page.
 
-11. Few common WebDriverIO commands to use:
+10. Few common WebDriverIO commands to use:
 ````
 browser.url('url')
 $('selector').click()

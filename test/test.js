@@ -1,15 +1,15 @@
 describe('Page', () => {
 
-    before(() => {
-        browser.url('/');
+    before(async function () {
+        await browser.url('/');
     })
 
-    it('Title', () => {
-        expect(browser).toHaveTitle('TechStart')
+    it('Title', async function () {
+        await expect(browser).toHaveTitle('TechStart')
     })
 
-    it('URL', () => {
-        expect(browser).toHaveUrl('https://free-courses-client-prod.herokuapp.com/line/patient')
+    it('URL', async function () {
+        await expect(browser).toHaveUrl('https://free-courses-client-prod.herokuapp.com/line/patient')
     })
 
 })
